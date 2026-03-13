@@ -296,8 +296,6 @@ function getRequiredHoursPerMonth(textFile, rateFile, bonusCount, driverID, mont
 // actualHours: (typeof string) formatted as hhh:mm:ss
 // requiredHours: (typeof string) formatted as hhh:mm:ss
 // rateFile: (typeof string) path to driver rates text file
-// Returns: integer (net pay)
-// ============================================================
 function getNetPay(driverID, actualHours, requiredHours, rateFile) {
     var rateContent = fs.readFileSync(rateFile, "utf8");
     var rateLines = rateContent.split("\n").filter(function(l) { return l.trim() !== ""; });
